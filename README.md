@@ -2,10 +2,6 @@
 
 A professional, scalable multi-channel reporting dashboard built with Next.js 16, PostgreSQL, and TypeScript.
 
-## Architecture Overview
-
-This implementation follows senior-engineer best practices with clear separation of concerns:
-
 ### Layered Structure
 
 ```
