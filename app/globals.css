@@ -82,16 +82,29 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-/* Enhanced date input styling */
+/* Style date inputs for better readability */
 input[type="date"] {
-  color-scheme: light;
+  color-scheme: light !important;
   @apply px-4 py-3 font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
   font-size: 1rem;
 }
 
 .dark input[type="date"] {
-  color-scheme: dark;
-  @apply bg-slate-800 text-white;
+  color-scheme: light !important;
+  @apply bg-white text-slate-900;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit-year-field,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field {
+  color: #0f172a !important;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -99,11 +112,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border-radius: 4px;
   margin-right: 2px;
   opacity: 1;
-  filter: invert(0.8);
+  filter: invert(0.2);
 }
 
 .dark {
-  --radius: 0.625rem;
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
