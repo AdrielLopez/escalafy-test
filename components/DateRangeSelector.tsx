@@ -23,6 +23,7 @@ export function DateRangeSelector({
           type="date"
           value={startDate}
           onChange={(e) => onStartDateChange(e.target.value)}
+          max={endDate}
           className="w-full px-4 py-3 text-base font-semibold text-slate-900 border-2 border-slate-300 rounded-md focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all bg-white"
         />
       </div>
@@ -34,6 +35,7 @@ export function DateRangeSelector({
           type="date"
           value={endDate}
           onChange={(e) => onEndDateChange(e.target.value)}
+          min={startDate}
           className="w-full px-4 py-3 text-base font-semibold text-slate-900 border-2 border-slate-300 rounded-md focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all bg-white"
         />
       </div>

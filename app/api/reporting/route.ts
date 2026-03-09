@@ -18,6 +18,13 @@ export async function GET(request: NextRequest) {
       );
     }
 
+    if (startDate > endDate) {
+      return NextResponse.json(
+        { error: 'Invalid date range: endDate must be greater than or equal to startDate' },
+        { status: 400 }
+      );
+    }
+
     const metrics = metricsParam.split(',').map((m) => m.trim());
 
     const result = await getReporting({
